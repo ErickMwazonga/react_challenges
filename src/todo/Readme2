@@ -1,0 +1,17 @@
+Create a component that implements a dynamic form using React hooks. The component should allow the user to add and remove form fields as needed, and the data entered into the fields should be stored in state.
+
+The component should have the following features:
+
+Add new fields to the form: There should be a button that adds a new field to the form when clicked. Each field should have a label, an input, and a remove button.
+
+Remove fields from the form: Each field should have a remove button that removes that specific field from the form when clicked.
+
+Store data in state: The data entered into each field should be stored in state, so that it can be accessed and used by other components.
+
+Validation: The component should have the ability to validate each field as it is entered, and display an error message if the input is invalid.
+
+Submit form: There should be a submit button that sends the data entered into the form to a specified endpoint.
+
+You can use any UI library of your choice for styling and layout, but the core functionality should be implemented using React hooks.
+
+Test your component in a separate file using Jest and Enzyme.

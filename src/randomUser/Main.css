@@ -1,0 +1,14 @@
+li {
+	list-style-type: none;
+	padding: 10px;
+	margin: 5px;
+	background-color: aquamarine;
+	width: 300px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.main-section {
+}

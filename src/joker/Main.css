@@ -1,0 +1,33 @@
+.dad-joke-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.dad-joke-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.dad-joke {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.new-joke-button {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.new-joke-button:hover {
+	background-color: #0062cc;
+}
