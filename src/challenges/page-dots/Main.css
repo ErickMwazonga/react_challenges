@@ -1,0 +1,43 @@
+.dots-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#click-area {
+	flex-grow: 1;
+	width: inherit;
+	height: inherit;
+	border-bottom: 1px solid #666;
+	cursor: pointer;
+}
+
+#button-wrapper {
+	display: flex;
+	padding: 25px;
+	gap: 20px;
+}
+
+#button-wrapper button {
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+.dot {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: bisque;
+	border: 1px solid gold;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.dot.active {
+	background-color: aqua;
+	width: 15px;
+	height: 15px;
+}

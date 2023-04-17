@@ -1,0 +1,137 @@
+.password-container {
+	width: 400px;
+	margin: 0 auto;
+	border-radius: 5px;
+	border: 1px solid #dcd8d8;
+	background-color: #1f2630;
+	color: #dcd8d8;
+	padding: 4rem;
+}
+
+.password-container .submit-button {
+	margin-top: 23px;
+}
+
+.password-header {
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.password-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+label {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.password-with-show {
+	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.password-with-show > span {
+	margin: 0 15px;
+	font-size: 25px;
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+}
+
+input[type='password'],
+input[type='text'] {
+	/* flex-grow: 1; */
+	width: 100%;
+	height: 30px;
+	padding: 12px 20px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+input[type='password']:focus,
+input[type='text']:focus {
+	outline: none;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.password-strength-meter {
+	width: 100%;
+	height: 15px;
+	margin-top: 10px;
+	border-radius: 5px;
+	border: 1px solid #44403d;
+}
+
+.password-strength-meter > span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: inherit;
+	font-size: 11px;
+	font-weight: 400;
+	border-radius: inherit;
+}
+
+.password-strength-meter > .very-weak {
+	width: 20%;
+	background: #e60000;
+}
+
+.password-strength-meter > .weak {
+	width: 40%;
+	background: #ff8c00;
+}
+
+.password-strength-meter > .fair {
+	width: 60%;
+	background: #ffcc00;
+}
+
+.password-strength-meter > .strong {
+	width: 80%;
+	background: #3cb371;
+}
+
+.password-strength-meter > .very-strong {
+	width: 100%;
+	background: #008000;
+}
+
+.checks-display {
+	width: 100%;
+	margin-top: 20px;
+	text-align: left;
+}
+
+.checks-item {
+	display: flex;
+	align-items: center;
+	line-height: 20px;
+	font-weight: bolder;
+}
+
+.checks-item .icon {
+	display: flex;
+}
+
+.checks-item .text {
+	padding: 2px;
+	margin-left: 5px;
+}
+
+.checks-display .checks-item.met {
+	color: #2cba6c;
+}
+
+.checks-display .checks-item.unmet .icon {
+	color: #e03574;
+}

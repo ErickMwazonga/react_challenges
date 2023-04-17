@@ -1,0 +1,37 @@
+$primary-color: #fb7413;
+$secondary-color: #9e7c64;
+$text-primary-color: #f9fafc;
+
+.btn {
+	background-color: $secondary-color;
+	border: none;
+	color: $text-primary-color;
+	font-size: 0.85rem;
+	font-weight: 700;
+	border-radius: 20px;
+	letter-spacing: 0.2ch;
+	padding: 12px 27px;
+	width: 100%;
+	cursor: pointer;
+
+	&.sharp {
+		border-radius: 0;
+	}
+
+	&.outline {
+		// border: 1px solid #9e7c64;
+		color: #333;
+		background-color: $secondary-color;
+	}
+
+	&:hover {
+		background-color: $primary-color;
+		color: $text-primary-color;
+		transform: translateX(-2px);
+	}
+
+	&:disabled {
+		background-color: grey;
+		cursor: not-allowed;
+	}
+}
