@@ -7,6 +7,8 @@ import {
 	RandomUser,
 	Todos,
 	Rating,
+	ToggleTheme,
+	NotFound,
 } from './challenges';
 import Home from './Home';
 import './App.css';
@@ -26,6 +28,7 @@ const App = () => {
 		{ path: '/joker', component: <Joker /> },
 		{ path: '/password', component: <PasswordMeter /> },
 		{ path: '/autocomplete', component: <AutoComplete /> },
+		{ path: '/toggle-theme', component: <ToggleTheme /> },
 	];
 	return (
 		<div className="App">
@@ -33,6 +36,7 @@ const App = () => {
 				{routes.map(({ path, component }) => (
 					<Route path={path} element={component} key={path} />
 				))}
+				<Route path="*" element={<NotFound />} />
 			</Routes>
 		</div>
 	);

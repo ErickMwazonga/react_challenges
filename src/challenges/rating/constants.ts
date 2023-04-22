@@ -6,7 +6,8 @@ const FEEDBACK = {
 };
 
 const RESULTS = {
-	title: (value: number) => `You rated ${value}/5`,
+	title: (value: number, percentage: number) =>
+		`You rated ${value}/5 -> ${percentage}%`,
 	thankYouTitle: 'Thank you!',
 	thankYouDescription:
 		'We appreciate you taking the time to give a rating' +

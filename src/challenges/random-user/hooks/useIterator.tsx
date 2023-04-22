@@ -33,12 +33,12 @@ const useIterator = (url: string) => {
 
 			const user: IUser = {
 				index: userList.length,
-				email: email,
-				gender: gender,
-				title: title,
+				email,
+				gender,
+				title,
 				firstName: first,
 				lastName: last,
-				thumbnail: thumbnail,
+				thumbnail,
 			};
 
 			setCurrentUser(user);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { GiPodiumWinner } from 'react-icons/gi';
 import { SlClose } from 'react-icons/sl';
 import Button from '../../common/Button';
@@ -10,6 +10,8 @@ interface Props {
 }
 
 const Results: React.FC<Props> = ({ rating, reset }) => {
+	const percentage = useMemo(() => (rating / 5) * 100, [rating]);
+
 	return (
 		<div className="results">
 			<div className="card">
@@ -19,7 +21,7 @@ const Results: React.FC<Props> = ({ rating, reset }) => {
 				<div className="image-section">
 					<GiPodiumWinner className="image" />
 				</div>
-				<p className="text">{RESULTS.title(rating)}</p>
+				<p className="text">{RESULTS.title(rating, percentage)}</p>
 				<div className="details">
 					<h1>{RESULTS.thankYouTitle}</h1>
 					<p>{RESULTS.thankYouDescription}</p>

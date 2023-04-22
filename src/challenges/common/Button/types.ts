@@ -4,8 +4,8 @@ export type Variant = 'primary' | 'secondary' | 'outline';
 export type Type = 'sharp' | 'rounded' | 'icon';
 
 export interface ButtonProps {
-	text: string | number;
 	variant?: Variant;
+	text?: string | number;
 	type?: Type;
 	disabled?: boolean;
 	style?: CSSProperties;

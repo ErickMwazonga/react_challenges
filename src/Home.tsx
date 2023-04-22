@@ -13,6 +13,7 @@ const Home = () => {
 				<Link to="/rating">Rating</Link>
 				<Link to="/password">Password</Link>
 				<Link to="/autocomplete">Auto-Complete</Link>
+				<Link to="/toggle-theme">Toggle Theme</Link>
 			</div>
 		</>
 	);
