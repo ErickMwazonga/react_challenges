@@ -9,6 +9,7 @@ import {
 	Rating,
 	ToggleTheme,
 	NotFound,
+	FileStructure,
 } from './challenges';
 import Home from './Home';
 import './App.css';
@@ -29,6 +30,7 @@ const App = () => {
 		{ path: '/password', component: <PasswordMeter /> },
 		{ path: '/autocomplete', component: <AutoComplete /> },
 		{ path: '/toggle-theme', component: <ToggleTheme /> },
+		{ path: '/file-structure', component: <FileStructure /> },
 	];
 	return (
 		<div className="App">

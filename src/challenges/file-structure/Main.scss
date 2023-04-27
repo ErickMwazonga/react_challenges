@@ -1,0 +1,55 @@
+.file-structure {
+    min-width: 50%;
+    min-height: 80%;
+    border: 1px dotted blue;
+    display: flex;
+
+    ul {
+        margin-top: 0;
+        padding-left: 25px;
+    }
+    
+   
+    .sidebar {
+        width: 40%;
+        text-align: left;
+        border-right: 1px dotted blue;
+        padding: 20px;
+    }
+
+    .content {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+
+    .folder .header,
+    .file {
+        display: flex;
+        align-items: center;
+        line-height: 25px;
+        padding: 2px 6px;
+        font-size: 15px;
+
+        cursor: pointer;
+
+        .icon {
+            // vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        &.active,
+        &:hover {
+            color: red;
+            background-color: #efefef;
+            border-radius: 3px;
+        }
+    }
+    
+    li {
+        list-style-type: none;
+    }
+}

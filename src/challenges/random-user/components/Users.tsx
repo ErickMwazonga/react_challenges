@@ -11,7 +11,7 @@ const AllUsers: React.FC<IProps> = ({ userList, currentUser }) => {
 	return (
 		<div>
 			<span>All Users</span>
-			<ul>
+			<ul className='userItem'>
 				{userList.map((user: IUser) => (
 					<User user={user} currentUser={currentUser} />
 				))}

@@ -21,7 +21,9 @@ const Results: React.FC<Props> = ({ rating, reset }) => {
 				<div className="image-section">
 					<GiPodiumWinner className="image" />
 				</div>
-				<p className="text">{RESULTS.title(rating, percentage)}</p>
+				<p className="text">
+					{RESULTS.title(rating, percentage)}
+				</p>
 				<div className="details">
 					<h1>{RESULTS.thankYouTitle}</h1>
 					<p>{RESULTS.thankYouDescription}</p>
