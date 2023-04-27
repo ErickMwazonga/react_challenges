@@ -5,11 +5,20 @@ interface Props {
 }
 
 const Content: React.FC<Props> = ({ currentFile }) => {
-    const noContent = <p>Select a file to view content</p>
+    const hasContent = currentFile?.content
+    const emptyFileContent = <p>The file {currentFile?.fileName} does not have any content</p>
+
+    if (!currentFile) {
+        return (
+            <div className="content">
+                <p>Select a file to view it's content</p>
+            </div>
+        )
+    }
     
     return (
         <div className="content">
-            {currentFile ? <p>Content for {currentFile.fileName}</p> : noContent}
+            {hasContent ? <pre>{currentFile.content}</pre> : emptyFileContent}
         </div>
     )
 }

@@ -1,24 +1,28 @@
 .file-structure {
     min-width: 50%;
     min-height: 80%;
-    border: 1px dotted blue;
+    border: 1px dotted #58585f;
     display: flex;
 
     ul {
         margin-top: 0;
+        margin-bottom: 0;
         padding-left: 25px;
     }
     
    
     .sidebar {
-        width: 40%;
+        width: fit-content;
         text-align: left;
-        border-right: 1px dotted blue;
-        padding: 20px;
+        border-right: 1px dotted #58585f;
+        padding: 20px 40px 20px 10px;
+        background-color: #58585f; 
+        color: #dbdbea;
     }
 
     .content {
-        width: 60%;
+        // min-width: 60%;
+        min-width: fit-content;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -43,8 +47,8 @@
 
         &.active,
         &:hover {
-            color: red;
-            background-color: #efefef;
+            color: #ffa2a2;
+            background-color: #73737a;
             border-radius: 3px;
         }
     }

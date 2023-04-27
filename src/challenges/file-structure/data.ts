@@ -112,11 +112,13 @@ const data: FileNodes = [
     {
         "id": uuid(),
         "fileName": "package.json",
+        "content": `/* Package json file is messy :-) */`,
         "children": []
     },
     {
         "id": uuid(),
         "fileName": "README.md",
+        "content": `# Hello World! This is an example project, meant to show how files are structured.`,
         "children": []
     },
 ]
