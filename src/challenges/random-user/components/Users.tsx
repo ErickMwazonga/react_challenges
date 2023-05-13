@@ -1,5 +1,5 @@
 import React from 'react';
-import { IUser } from '../types';
+import { User as IUser } from '../types';
 import User from './User';
 
 interface IProps {

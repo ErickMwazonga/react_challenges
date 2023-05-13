@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
-import { IUser } from '../types';
+import { Name, User, Location } from '../types';
 
 const useIterator = (url: string) => {
-	const [userList, setUserList] = useState<IUser[]>([]);
-	const [currentUser, setCurrentUser] = useState<IUser>({} as IUser);
+	const [userList, setUserList] = useState<User[]>([]);
+	const [currentUser, setCurrentUser] = useState<User>({} as User);
 	const [loading, setLoading] = useState<boolean>(false);
 	const dataFetchedRef = useRef(false);
 
@@ -13,9 +13,25 @@ const useIterator = (url: string) => {
 		fetchUser();
 	}, []);
 
-	const updateUserList = (newUser: IUser) => {
+	const updateUserList = (newUser: User) => {
 		setUserList((prevList) => [...prevList, newUser]);
 	};
+
+	const buildName = ({ title, first, last}: any): Name => {
+		return {
+			title,
+			firstName: first,
+			lastName: last,
+		} as Name
+	}
+
+	const buildLocation = ({ country, state, city}: any): Location => {
+		return {
+			country,
+			state,
+			city
+		} as Location
+	}
 
 	async function fetchUser() {
 		setLoading(true);
@@ -27,24 +43,33 @@ const useIterator = (url: string) => {
 			const {
 				gender,
 				email,
-				name: { title, first, last },
-				picture: { thumbnail },
+				name,
+				location,
+				phone,
+				login: { username },
+				picture: { thumbnail: picture },
+				dob: { age, date: dateOfBirth }
 			} = data.results[0];
 
-			const user: IUser = {
+			const user: User = {
 				index: userList.length,
+				username,
+				name: buildName(name),
+				location: buildLocation(location),
 				email,
 				gender,
-				title,
-				firstName: first,
-				lastName: last,
-				thumbnail,
+				phone,
+				picture,
+				age,
+				dob: dateOfBirth
 			};
+
+			console.log(user, 'USER')
 
 			setCurrentUser(user);
 			updateUserList(user);
 		} catch (error) {
-			console.log(error);
+			console.log(error, 'ERRORS');
 		}
 
 		setLoading(false);
@@ -56,7 +81,7 @@ const useIterator = (url: string) => {
 		if (listCount === 0 || currIndex === userList[listCount - 1].index) {
 			fetchUser();
 		} else {
-			const newCurrentUser: IUser = userList[currIndex + 1];
+			const newCurrentUser: User = userList[currIndex + 1];
 			setCurrentUser(newCurrentUser);
 		}
 	};
@@ -69,7 +94,7 @@ const useIterator = (url: string) => {
 			return;
 		}
 
-		const newCurrentUser: IUser = userList[currIndex - 1];
+		const newCurrentUser: User = userList[currIndex - 1];
 		setCurrentUser(newCurrentUser);
 	};
 

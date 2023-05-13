@@ -10,9 +10,10 @@ import {
 	ToggleTheme,
 	NotFound,
 	FileStructure,
+	Calculator,
 } from './challenges';
 import Home from './Home';
-import './App.css';
+import './App.scss';
 
 interface IRoute {
 	path: string;
@@ -31,6 +32,7 @@ const App = () => {
 		{ path: '/autocomplete', component: <AutoComplete /> },
 		{ path: '/toggle-theme', component: <ToggleTheme /> },
 		{ path: '/file-structure', component: <FileStructure /> },
+		{ path: '/calculator', component: <Calculator /> },
 	];
 	return (
 		<div className="App">

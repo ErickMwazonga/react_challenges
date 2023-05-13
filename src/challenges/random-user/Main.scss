@@ -1,0 +1,150 @@
+.profile-card {
+	display: flex;
+    flex-direction: column;
+    width: 400px;
+    background: #fefefe;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+.card-header {
+    justify-content: center;
+	position: relative;
+	width: 100%;
+	border-radius: 20px 20px 0 0;
+	margin-bottom: 5rem;
+
+	.cover-image {
+		width: inherit;
+		border-radius: inherit;
+
+		img {
+			width: inherit;
+			height: auto;
+			border-radius: inherit;
+		}
+	}
+
+	.card-header-details {
+		display: flex;
+		flex-direction: row;
+		gap: 15px;
+		width: fit-content;
+		position: absolute;
+		top: 75%;
+		padding: 0 20px;
+
+		.avatar {
+			img {
+				width: 6rem;
+				height: 6rem;
+				border-radius: 50%;
+				border: 7px solid #fefefe;
+			}
+		}
+
+		.details {
+			padding: 10px 0;
+
+			p {
+				margin: 7px 0;
+			}
+
+			.name-title {
+				color: #fff;
+			}
+
+			.name {
+				font-weight: bold;
+				font-size: 20px;
+				letter-spacing: 1px;
+			}
+
+			.location {
+				display: flex;
+				gap: 3px;
+				
+				.icon {
+					font-size: 20px;
+					padding: 2px 0;
+				}
+
+				.city-state {
+					font-size: 12px;
+					font-weight: 400;
+				}
+
+				.country {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+.card-content {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	padding: 20px;
+	border-bottom: .5px solid #E0E1E4;
+
+	.contact-details,
+	.age-details {
+		display: flex;
+    	flex-direction: column;
+		padding: 0 10px;
+	}
+
+	.contact-details {
+		border-right: .5px solid #E0E1E4;
+	}
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	padding: 20px 22px 0 22px;
+    margin-bottom: 30px;
+
+	button {
+		width: fit-content;
+		min-width: 100px;
+    	height: 35px;
+		padding: 8px;
+		border-radius: 5px;
+		border: .5px solid #E0E1E4;
+		box-shadow: 0px 0px 20px -20px;
+		cursor: pointer;
+		background-color: white;
+		transition: all 0.2s ease-in-out 0ms;
+		user-select: none;
+		font-family: 'Poppins', sans-serif;
+	}
+	
+	button:hover {
+		background-color: #F2F2F2;
+		box-shadow: 0px 0px 20px -18px;
+	}
+	
+	button:active {
+		transform: scale(0.95);
+	}
+}
+
+.next-button {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+	.loader {
+		animation: loader 1.5s linear infinite; 
+	}
+
+	@keyframes loader{
+		to{ transform: rotate(360deg); }
+	}
+}

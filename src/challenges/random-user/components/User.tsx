@@ -1,9 +1,9 @@
 import React from 'react';
-import { IUser } from '../types';
+import { User } from '../types';
 
 interface IProps {
-	user: IUser;
-	currentUser: IUser;
+	user: User;
+	currentUser: User;
 }
 
 const DisplayUser: React.FC<IProps> = ({ user, currentUser }) => {
@@ -12,7 +12,7 @@ const DisplayUser: React.FC<IProps> = ({ user, currentUser }) => {
 	return (
 		<li key={user.email} className={isUserCurrent ? 'bold' : ''}>
 			<span>
-				{user.firstName} {user.lastName}
+				{user.name.firstName} {user.name.lastName}
 			</span>
 		</li>
 	);

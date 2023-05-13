@@ -1,22 +1,26 @@
 import React from 'react';
-import { IUser } from '../types';
-import Button from '../../common/Button';
-import '../Main.css';
+import { RiLoader2Line } from 'react-icons/ri'
+import { User } from '../types';
 
 interface IProps {
-	currentUser: IUser;
+	currentUser: User;
 	next: () => void;
 	previous: () => void;
+	loading: boolean
 }
 
-const Controls: React.FC<IProps> = ({ next, previous, currentUser }) => {
+const Controls: React.FC<IProps> = ({ loading, next, previous, currentUser }) => {
 	const isFirstUser = currentUser.index === 0;
 
 	return (
-		<div className="controls">
-			<Button text="Prev" onClick={previous} disabled={isFirstUser} />
-			<Button text="Next" onClick={next} />
+		<div className='footer'>
+			<button onClick={previous} disabled={isFirstUser}>Prev</button>
+			<button onClick={next} className='next-button'>
+				{loading && <RiLoader2Line className='loader'/>}
+				<span>Next</span>
+			</button>
 		</div>
 	);
 };
+
 export default Controls;

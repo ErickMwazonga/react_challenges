@@ -1,12 +1,27 @@
-type ITitles = 'Mr' | 'Mrs' | 'Miss';
-type IGender = 'male' | 'female';
+type Title = 'Mr' | 'Mrs' | 'Miss';
+type Gender = 'male' | 'female';
 
-export interface IUser {
+export interface User {
 	index: number;
+	username: string;
 	email: string;
-	title: ITitles;
+	name: Name
+	gender: Gender;
+	age: number;
+	dob: string;
+	picture: string;
+	phone: string;
+	location: Location,
+}
+
+export interface Location {
+	country: string;
+	state: string;
+	city: string;
+}
+
+export interface Name {
+	title: Title;
 	firstName: string;
 	lastName: string;
-	gender: IGender;
-	thumbnail: string;
 }

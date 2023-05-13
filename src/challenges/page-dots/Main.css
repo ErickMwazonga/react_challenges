@@ -8,10 +8,13 @@
 }
 
 #click-area {
-	flex-grow: 1;
-	width: inherit;
-	height: inherit;
-	border-bottom: 1px solid #666;
+	width: 60%;
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #ccc;
+    border-radius: 5px;
 	cursor: pointer;
 }
 

@@ -8,3 +8,4 @@ export { default as Rating } from './rating/Main';
 export { default as ToggleTheme } from './toggle-theme/Main';
 export { default as NotFound } from './not-found/Main';
 export { default as FileStructure } from './file-structure/Main';
+export { default as Calculator } from './calculator/Main';

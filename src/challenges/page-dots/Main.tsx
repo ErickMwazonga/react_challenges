@@ -42,12 +42,12 @@ const Main = () => {
 		dispatch({ type: ActionTypes.REDO });
 	};
 
+	const hasDots = dots.length > 0 || cache.length > 0
+
 	return (
 		<div className="dots-container">
 			<Dots dots={dots} draw={draw} currentDot={currentDot} />
-			{(dots.length > 0 || cache.length > 0) && (
-				<Controls undo={undo} redo={redo} />
-			)}
+			{hasDots && <Controls undo={undo} redo={redo} />}
 		</div>
 	);
 };

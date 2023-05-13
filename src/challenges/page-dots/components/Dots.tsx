@@ -8,12 +8,20 @@ interface Props {
 	draw: (e: MouseEvent<HTMLDivElement>) => void;
 }
 
-const Dots: React.FC<Props> = ({ dots, draw, currentDot }) => (
-	<div id="click-area" onClick={draw}>
-		{dots.map((dot: IDot, _) => (
-			<Dot dot={dot} currentDot={currentDot} />
-		))}
-	</div>
-);
+const Dots: React.FC<Props> = ({ dots, draw, currentDot }) => {
+	const hasDots = dots.length > 0
+
+	const dotsDisplay = dots.map((dot: IDot, _) => (
+		<Dot dot={dot} currentDot={currentDot} />
+	))
+
+	const noDotsDisplay = <p>Click in here to draw a dot</p>
+
+	return (
+		<div id="click-area" onClick={draw}>
+			{hasDots ? dotsDisplay : noDotsDisplay}
+		</div>
+	)
+}
 
 export default Dots;
